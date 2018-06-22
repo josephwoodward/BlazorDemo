@@ -12,5 +12,12 @@
     <app>Loading...</app>
 
     <script type="blazor-boot"></script>
+    <script type="text/javascript">
+         Blazor.registerFunction('say', (data) => {
+             console.dir(data);
+             document.getElementById("itemAddedAlert").innerText= data.message;
+             return true;
+         });
+    </script>
 </body>
 </html>

@@ -1,6 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Blazored.Storage;
+using Microsoft.AspNetCore.Blazor.Browser.Interop;
 using Microsoft.AspNetCore.Blazor.Components;
 
 namespace demo1
@@ -24,7 +24,13 @@ namespace demo1
         {
             List.Add(NewItem);
             Storage.SetItem("list", List);
+            DisplayNotice();
             NewItem = string.Empty;
+        }
+        
+        public void DisplayNotice()
+        {
+            RegisteredFunction.Invoke<bool>("say", new { message = $"{NewItem} has been added to your list" });
         }
     }
 }

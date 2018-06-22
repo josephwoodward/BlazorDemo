@@ -6,6 +6,8 @@
 <input type="text" bind="@NewItem" />
 <button onclick="@AddItem">Add To Do</button>
 
+<p id="itemAddedAlert" style="margin: 0; color: green;"></p>
+
 <ul>
     @{
         foreach(var item in List)
