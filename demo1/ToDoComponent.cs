@@ -10,8 +10,6 @@ namespace demo1
 
         public IList<string> List { get; set; }
 
-        public bool ListIsInitialised => List != null;
-
         protected override void OnInit()
         {
             List = new List<string>();
