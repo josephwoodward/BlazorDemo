@@ -3,27 +3,8 @@
 <h1>My To Do List</h1>
 
 <ul>
-    @{
-        foreach(var item in List)
-        {
-            <li>@item</li>
-        }
-    }
+    <li></li>
 </ul>
 
-<input type="text" bind="@NewItem" />
-<button onclick="@AddItem">Add To Do</button>
-
-@functions
-{
-
-    List<string> List = new List<string>();
-    string NewItem;
-    
-    void AddItem()
-    {
-        List.Add(NewItem);
-        NewItem = string.Empty;
-    }
-
-}
+<input type="text"  />
+<button >Add To Do</button>
