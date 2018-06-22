@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Blazor.Browser.Services;
 using Microsoft.Extensions.DependencyInjection;
 using System;
+using Blazored.Storage;
 
 namespace demo1
 {
@@ -11,7 +12,7 @@ namespace demo1
         {
             var serviceProvider = new BrowserServiceProvider(services =>
             {
-                // Add any custom services here
+                services.AddLocalStorage();
             });
 
             new BrowserRenderer(serviceProvider).AddComponent<App>("app");
